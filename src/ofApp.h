@@ -11,6 +11,11 @@ April.18th.2016
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "ofxAssimpModelLoader.h"
+#include "imageClass.h"
+#include "ball/ball.h"
+#include "ball/ballBlue.h"
+#include "ball/ballGreen.h"
+#include "ball/ballRed.h"
 
 class ofApp : public ofBaseApp{
 
@@ -32,7 +37,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		ofEasyCam cam;
-		ofFbo fbo;
+		//ofFbo fbo; //brush code
 		ofxPanel gui;
 		ofParameter<int> scale;
 		ofParameter<int> red;
@@ -41,5 +46,13 @@ class ofApp : public ofBaseApp{
 		ofParameter<int> alpha;
 
 		ofxAssimpModelLoader model;
+
+		imageClass img;
 		
+		//#define NBALLS 2000
+		vector <ball> myBall;
+		ballBlue myBallBlue;
+		ballGreen myBallGreen;
+		ballRed myBallRed;
+
 };

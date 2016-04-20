@@ -1,27 +1,4 @@
-﻿  main.cpp
-  ofApp.cpp
-  ofxAssimpAnimation.cpp
-  ofxAssimpMeshHelper.cpp
-  ofxAssimpModelLoader.cpp
-  ofxAssimpTexture.cpp
-  ofxBaseGui.cpp
-  ofxButton.cpp
-  ofxGuiGroup.cpp
-  ofxLabel.cpp
-  ofxPanel.cpp
-  ofxSlider.cpp
-  ofxSliderGroup.cpp
-  ofxToggle.cpp
-     Creating library bin\ofCityMatrix_debug.lib and object bin\ofCityMatrix_debug.exp
+﻿  ofApp.cpp
   ofCityMatrix.vcxproj -> C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\apps\myApps\ofCityMatrix\bin\ofCityMatrix_debug.exe
   
   	                   9	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\
-  	    New File  		 2939392	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\assimp.dll
-  	    New File  		 1266176	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\fmodex.dll
-  	    New File  		 1312768	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\fmodexL.dll
-  	    New File  		 5647872	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\FreeImage.dll
-  	    New File  		  580608	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\freetype.dll
-  	    New File  		  237568	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\glut32.dll
-  	    New File  		 1178624	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\libeay32.dll
-  	    New File  		  269824	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\ssleay32.dll
-  	    New File  		   69632	C:\Users\RYAN\Dropbox (MIT)\01_Work\Resources\openFrameworks\export\vs\Win32\Zlib.dll
