@@ -175,6 +175,10 @@
     <ClCompile Include="src\ball\ballBlue.cpp" />
     <ClCompile Include="src\ball\ballGreen.cpp" />
     <ClCompile Include="src\ball\ballRed.cpp" />
+    <ClCompile Include="src\block\block.cpp" />
+    <ClCompile Include="src\block\block_blank.cpp" />
+    <ClCompile Include="src\block\block_building.cpp" />
+    <ClCompile Include="src\block\block_road.cpp" />
     <ClCompile Include="src\imageClass.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -196,6 +200,10 @@
     <ClInclude Include="src\ball\ballBlue.h" />
     <ClInclude Include="src\ball\ballGreen.h" />
     <ClInclude Include="src\ball\ballRed.h" />
+    <ClInclude Include="src\block\block.h" />
+    <ClInclude Include="src\block\block_blank.h" />
+    <ClInclude Include="src\block\block_building.h" />
+    <ClInclude Include="src\block\block_road.h" />
     <ClInclude Include="src\imageClass.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />

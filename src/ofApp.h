@@ -16,6 +16,10 @@ April.18th.2016
 #include "ball/ballBlue.h"
 #include "ball/ballGreen.h"
 #include "ball/ballRed.h"
+#include "block/block.h"
+#include "block/block_blank.h"
+#include "block/block_building.h"
+#include "block/block_road.h"
 
 class ofApp : public ofBaseApp{
 

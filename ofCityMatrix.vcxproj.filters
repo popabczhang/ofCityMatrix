@@ -58,6 +58,18 @@
     <ClCompile Include="src\ball\ballRed.cpp">
       <Filter>src\ball</Filter>
     </ClCompile>
+    <ClCompile Include="src\block\block.cpp">
+      <Filter>src\block</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block\block_blank.cpp">
+      <Filter>src\block</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block\block_building.cpp">
+      <Filter>src\block</Filter>
+    </ClCompile>
+    <ClCompile Include="src\block\block_road.cpp">
+      <Filter>src\block</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -95,6 +107,9 @@
     </Filter>
     <Filter Include="src\ball">
       <UniqueIdentifier>{6064eb93-4999-4709-b0fd-aff66090ab9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\block">
+      <UniqueIdentifier>{16c400ba-32af-4029-86f2-5ecbbcbdcdab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +280,18 @@
     </ClInclude>
     <ClInclude Include="src\ball\ballRed.h">
       <Filter>src\ball</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block\block.h">
+      <Filter>src\block</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block\block_blank.h">
+      <Filter>src\block</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block\block_building.h">
+      <Filter>src\block</Filter>
+    </ClInclude>
+    <ClInclude Include="src\block\block_road.h">
+      <Filter>src\block</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
