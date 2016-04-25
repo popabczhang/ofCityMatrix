@@ -1,42 +1,29 @@
 #include "block.h"
+
 block::block() {
 }
 
-void block::setup() {
-	x = ofGetWidth()*.5;
-	y = ofGetHeight()*.5;
-	dim = ofRandom(30, 60);
+void block::setup(int _xs, int _ys, int _id, int _r, ofColor _c, grid _g) {
+	xStop = _xs;
+	yStop = _ys;
+	id = _id;
+	rotation = _r;
+	g = _g;
+	baseColor = _c;
 
-	speedX = ofRandom(-1, 1);
-	speedY = ofRandom(-1, 1);
-
-	color.set(ofRandom(255), ofRandom(255), ofRandom(255));
+	x = (float(xStop) + .5) * g.cellSizeX;
+	y = (float(yStop) + .5) * g.cellSizeY;
+	z = 2.5;
 }
 
 void block::update() {
-	if (x < 0) {
-		x = 0;
-		speedX *= -1;
-	}
-	else if (x > ofGetWidth()) {
-		x = ofGetWidth();
-		speedX *= -1;
-	}
 
-	if (y < 0) {
-		y = 0;
-		speedY *= -1;
-	}
-	else if (y > ofGetHeight()) {
-		y = ofGetHeight();
-		speedY *= -1;
-	}
-
-	x += speedX;
-	y += speedY;
 }
 
 void block::draw() {
-	ofSetColor(color);
-	ofDrawCircle(x, y, dim);
+	ofSetColor(baseColor);
+	glPushMatrix();
+	glTranslatef(x, y, z);
+	ofDrawBox(g.cellSizeX * g.shrink, g.cellSizeY * g.shrink, 5.);
+	glPopMatrix();
 }

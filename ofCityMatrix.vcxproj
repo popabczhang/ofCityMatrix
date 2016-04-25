@@ -179,6 +179,7 @@
     <ClCompile Include="src\block\block_blank.cpp" />
     <ClCompile Include="src\block\block_building.cpp" />
     <ClCompile Include="src\block\block_road.cpp" />
+    <ClCompile Include="src\grid\grid.cpp" />
     <ClCompile Include="src\imageClass.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
@@ -204,6 +205,7 @@
     <ClInclude Include="src\block\block_blank.h" />
     <ClInclude Include="src\block\block_building.h" />
     <ClInclude Include="src\block\block_road.h" />
+    <ClInclude Include="src\grid\grid.h" />
     <ClInclude Include="src\imageClass.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />

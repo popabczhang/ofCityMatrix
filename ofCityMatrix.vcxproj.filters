@@ -70,6 +70,9 @@
     <ClCompile Include="src\block\block_road.cpp">
       <Filter>src\block</Filter>
     </ClCompile>
+    <ClCompile Include="src\grid\grid.cpp">
+      <Filter>src\grid</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -110,6 +113,9 @@
     </Filter>
     <Filter Include="src\block">
       <UniqueIdentifier>{16c400ba-32af-4029-86f2-5ecbbcbdcdab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\grid">
+      <UniqueIdentifier>{22055eeb-b4b1-4f76-9c38-31a2643c3d53}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -292,6 +298,9 @@
     </ClInclude>
     <ClInclude Include="src\block\block_road.h">
       <Filter>src\block</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grid\grid.h">
+      <Filter>src\grid</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

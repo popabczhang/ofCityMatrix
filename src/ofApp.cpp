@@ -8,6 +8,7 @@ April.18th.2016
 
 #include "ofApp.h"
 
+
 //--------------------------------------------------------------
 void ofApp::setup() {
 
@@ -27,9 +28,24 @@ void ofApp::setup() {
 
 	
 	// load 3D model
+
+	// test load model
+	/*
 	model.loadModel("test_object_03.3ds", 20);
 	//model.setPosition(ofGetWidth() / 2, ofGetHeight() / 2, 0);
+	*/
+
+	// grid
+	g.setup(16, 16, 1000., 1000.);
 	
+	// blocks
+	block tmpBlock;
+	for (int j = 0; j < g.extentY; j ++) {
+		for (int i = 0; i < g.extentX; i ++) {
+			tmpBlock.setup(i, j, 0, 0, ofColor::white, g);
+			blocks.push_back(tmpBlock);
+		}
+	}
 
 
 	//// 2D
@@ -45,16 +61,18 @@ void ofApp::setup() {
 	// image class
 	img.setup();
 
-	// ball class
+	// ball
+	/*
 	for (int i = 0; i<myBall.size(); i++) {
 		float size = (i + 1) * 0.001; // defining the size of each ball based on its place in the array
 		float randomX = ofRandom(0, ofGetWidth()); //generate a random value bigger than 0 and smaller than our application screen width
 		float randomY = ofRandom(0, ofGetHeight()); //generate a random value bigger than 0 and smaller than our application screen height
 		myBall[i].setup();
 	}
+	*/
 
+	// brush
 	/*
-	// brush code
 	fbo.allocate(800, 800);
 	fbo.begin();
 	ofClear(255);
@@ -71,18 +89,16 @@ void ofApp::update() {
 
 	//// 3D
 
-	//model.setRotation(1, 270 + ofGetElapsedTimef() * 60, 0, 0, 1);
-
 
 	//// 2D
 
-	// ball class
-	for (int i = 0; i<myBall.size(); i++) {
+	// ball
+	/*for (int i = 0; i<myBall.size(); i++) {
 		myBall[i].update();
 	}
 	myBallBlue.update();
 	myBallGreen.update();
-	myBallRed.update();
+	myBallRed.update();*/
 
 }
 
@@ -105,18 +121,14 @@ void ofApp::draw() {
 	
 	// draw 3D model
 	/*
-	//lets tumble the world with the mouse
-	glPushMatrix();
-	//draw in middle of the screen
-	glTranslatef(ofGetWidth() / 2, ofGetHeight() / 2, 0);
-	//tumble according to mouse
-	glRotatef(-mouseY, 1, 0, 0);
-	glRotatef(mouseX, 0, 1, 0);
-	glTranslatef(-ofGetWidth() / 2, -ofGetHeight() / 2, 0);
-	*/
 	ofSetColor(255, 255, 255, 255);
 	model.drawFaces();
-	//glPopMatrix();
+	*/
+
+	// draw block
+	for (int i = 0; i < blocks.size(); i++) {
+		blocks[i].draw();
+	}
 
 	// end 3D & cam
 	cam.end();
@@ -125,7 +137,8 @@ void ofApp::draw() {
 
 	//// 2D
 
-	// draw ball class
+	// draw ball
+	/*
 	for (int i = 0; i<myBall.size(); i++) {
 		myBall[i].draw();
 	}
@@ -133,7 +146,8 @@ void ofApp::draw() {
 	myBallBlue.draw();
 	myBallGreen.draw();
 	myBallRed.draw();
-	ofEnableBlendMode(OF_BLENDMODE_DISABLED);
+	ofEnableBlendMode(OF_BLENDMODE_DISABLED
+	*/
 
 	// draw FPS
 	ofSetColor(255, 255, 255, 255);
@@ -145,8 +159,8 @@ void ofApp::draw() {
 	// draw gui
 	gui.draw();
 
+	// brush
 	/*
-	// brush code
 	fbo.draw(0, 0);
 	*/
 
@@ -154,7 +168,8 @@ void ofApp::draw() {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
-	if (key == '1') {
+	// ball
+	/*if (key == '1') {
 		myBallBlue.setup();
 	}
 	else if (key == '2') {
@@ -162,7 +177,7 @@ void ofApp::keyPressed(int key) {
 	}
 	else if (key == '3') {
 		myBallRed.setup();
-	}
+	}*/
 }
 
 //--------------------------------------------------------------
@@ -178,7 +193,7 @@ void ofApp::mouseMoved(int x, int y) {
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button) {
 
-	// brush code
+	// brush
 	/*
 	fbo.begin();
 	ofPushStyle();
@@ -188,7 +203,8 @@ void ofApp::mouseDragged(int x, int y, int button) {
 	fbo.end();
 	*/
 
-	// ball code
+	// ball
+	/*
 	if (button == 0) {
 		ball tempBall;				// create the ball object
 		tempBall.setup();			// setup its initial state
@@ -206,6 +222,7 @@ void ofApp::mouseDragged(int x, int y, int button) {
 	else if (button == 2) {
 		myBall.clear();
 	}
+	*/
 
 }
 

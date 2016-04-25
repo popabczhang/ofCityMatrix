@@ -12,14 +12,19 @@ April.18th.2016
 #include "ofxGui.h"
 #include "ofxAssimpModelLoader.h"
 #include "imageClass.h"
+// ball
+/*
 #include "ball/ball.h"
 #include "ball/ballBlue.h"
 #include "ball/ballGreen.h"
 #include "ball/ballRed.h"
+*/
+#include "grid/grid.h"
 #include "block/block.h"
 #include "block/block_blank.h"
 #include "block/block_building.h"
 #include "block/block_road.h"
+
 
 class ofApp : public ofBaseApp{
 
@@ -53,10 +58,19 @@ class ofApp : public ofBaseApp{
 
 		imageClass img;
 		
+		// ball
+		/*
 		//#define NBALLS 2000
 		vector <ball> myBall;
 		ballBlue myBallBlue;
 		ballGreen myBallGreen;
 		ballRed myBallRed;
+		*/
+
+		// grid
+		grid g;
+
+		// block
+		vector <block> blocks;
 
 };
