@@ -1,2 +1,3 @@
 obj/Debug/
-bin/
+bin/ofCityMatrix_debug.*
+bin/*.dll
