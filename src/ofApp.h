@@ -73,4 +73,7 @@ class ofApp : public ofBaseApp{
 		// block
 		vector <block> blocks;
 
+		// font
+		ofTrueTypeFont myfont;
+
 };

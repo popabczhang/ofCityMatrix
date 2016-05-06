@@ -20,6 +20,9 @@ void ofApp::setup() {
 	// smooth in 2D
 	//ofEnableSmoothing();
 
+	// font
+	myfont.loadFont("verdana.ttf", 32);
+
 
 	//// 3D
 
@@ -42,7 +45,13 @@ void ofApp::setup() {
 	block tmpBlock;
 	for (int j = 0; j < g.extentY; j ++) {
 		for (int i = 0; i < g.extentX; i ++) {
-			tmpBlock.setup(i, j, 0, 0, ofColor::white, g);
+			int tmpId = floor(ofRandom(-1, 6) + 0.5);
+			//cout << "tmpId = " << tmpId << "; \n";
+			int tmpRotation = 0; // no rotation
+			//int tmpRotation = floor(ofRandom(0, 3) + 0.5) * 90; // totally random
+			//int tmpRotation = floor(pow(ofRandom(0, 1), 8) * 3 + 0.5) * 90; // little odd to rotate
+			//cout << "tmpRotation = " << tmpRotation << "; \n";
+			tmpBlock.setup(i, j, tmpId, tmpRotation, ofColor::white, g);
 			blocks.push_back(tmpBlock);
 		}
 	}
@@ -130,6 +139,8 @@ void ofApp::draw() {
 		blocks[i].draw();
 	}
 
+
+
 	// end 3D & cam
 	cam.end();
 	ofDisableDepthTest();
@@ -151,7 +162,7 @@ void ofApp::draw() {
 
 	// draw FPS
 	ofSetColor(255, 255, 255, 255);
-	ofDrawBitmapString("fps: " + ofToString(ofGetFrameRate(), 2), ofGetWidth() - 100, 15);
+	ofDrawBitmapStringHighlight("fps: " + ofToString(ofGetFrameRate(), 2), ofGetWidth() - 100, 20);
 
 	// draw image class
 	img.draw();
@@ -163,6 +174,9 @@ void ofApp::draw() {
 	/*
 	fbo.draw(0, 0);
 	*/
+
+	// font
+	//myfont.drawString("hi!!", 100, 100);
 
 }
 
