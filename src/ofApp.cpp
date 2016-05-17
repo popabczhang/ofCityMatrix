@@ -39,7 +39,9 @@ void ofApp::setup() {
 	/*
 	ofSetBoxResolution(30, 30, 30);
 	*/
-
+	// range of the shadow camera
+	shadow.setRange(10, 1000); //default: 10, 150
+	shadow.setBias(0.01); //default: 0.01
 	
 	// load 3D model
 
@@ -114,7 +116,8 @@ void ofApp::update() {
 
 
 	//// 3D
-
+	shadow.setLightPosition(ofVec3f(cos(ofGetElapsedTimef()*0.6) * 500, 250, 500));
+	shadow.setLightLookAt(ofVec3f(500, 500, 0));
 
 	//// 2D
 
@@ -138,37 +141,43 @@ void ofApp::draw() {
 
 
 	//// 3D
+	shadow.beginDepthPass();
+	glEnable(GL_DEPTH_TEST);
+	renderScene();
+	glDisable(GL_DEPTH_TEST);
+	shadow.endDepthPass();
 
-	// ofxSSAO
-	ssao.begin(cam.getNearClip(), cam.getFarClip()); 
-
-	// begin 3D & cam
-	ofEnableDepthTest();
-	glShadeModel(GL_SMOOTH); 
+	shadow.beginRenderPass(cam);
 	cam.begin();
-
-	
-	// draw 3D model
-	/*
-	ofSetColor(255, 255, 255, 255);
-	model.drawFaces();
-	*/
-
-	// draw block
-	for (int i = 0; i < blocks.size(); i++) {
-		blocks[i].draw();
-	}
-
-
-
-	// end 3D & cam
+	glEnable(GL_DEPTH_TEST);
+	renderScene();
+	glDisable(GL_DEPTH_TEST);
 	cam.end();
-	ofDisableDepthTest();
+	shadow.endRenderPass();
 
-	// ofxSSAO
-	ssao.end();
-	ofSetColor(255);
-	ssao.draw();
+
+	//// ofxSSAO
+	//ssao.begin(cam.getNearClip(), cam.getFarClip()); 
+
+	//// begin 3D & cam
+	//ofEnableDepthTest();
+	//glShadeModel(GL_SMOOTH); 
+	//cam.begin();
+
+	///////////////////
+
+	//renderScene();
+
+
+
+	//// end 3D & cam
+	//cam.end();
+	//ofDisableDepthTest();
+
+	//// ofxSSAO
+	//ssao.end();
+	//ofSetColor(255);
+	//ssao.draw();
 
 
 	//// 2D
@@ -202,6 +211,22 @@ void ofApp::draw() {
 
 	// font
 	//myfont.drawString("hi!!", 100, 100);
+
+}
+
+//--------------------------------------------------------------
+void ofApp::renderScene() {
+
+	// draw 3D model
+	/*
+	ofSetColor(255, 255, 255, 255);
+	model.drawFaces();
+	*/
+
+	// draw block
+	for (int i = 0; i < blocks.size(); i++) {
+		blocks[i].draw();
+	}
 
 }
 

@@ -37,6 +37,9 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
 
+		// for ofxShadowSimple
+		void renderScene();
+
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
