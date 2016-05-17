@@ -28,20 +28,32 @@ void ofApp::setup() {
 
 	// easy cam
 	cam.disableMouseInput();
-	cam.setDistance(1000);
-	cam.setPosition(500, -100, 1000);
-	cam.setTarget(ofVec3f(500, 500, 5));
+	cam.setDistance(10);
+	cam.setPosition(5, -1, 10);
+	cam.setTarget(ofVec3f(5, 5, 0));
 	cam.setNearClip(1);
-	cam.setFarClip(3000);
+	cam.setFarClip(30);
 	cam.enableMouseInput();
 
 	// ofxShadowSimple
-	/*
 	ofSetBoxResolution(30, 30, 30);
-	*/
+
 	// range of the shadow camera
-	shadow.setRange(10, 1000); //default: 10, 150
-	shadow.setBias(0.01); //default: 0.01
+	//////
+	//shadow.setRange(10, 150); //default: 10, 150
+	//shadow.setBias(0.01); //default: 0.01
+	//bunny.load("lofi-bunny.ply");
+	//vector< ofMeshFace > faces = bunny.getUniqueFaces();
+	//for (int i = 0; i < faces.size(); i++) {
+	//	faces[i].setVertex(0, faces[i].getVertex(0));
+	//	faces[i].setNormal(0, faces[i].getFaceNormal());
+	//	faces[i].setNormal(1, faces[i].getFaceNormal());
+	//	faces[i].setNormal(2, faces[i].getFaceNormal());
+	//}
+	//bunny.setFromTriangles(faces);
+	//bunny.smoothNormals(60);
+	//cout << "Bunny normals = " << bunny.getNumNormals() << endl;
+	//////
 	
 	// load 3D model
 
@@ -52,7 +64,7 @@ void ofApp::setup() {
 	*/
 
 	// grid
-	g.setup(16, 16, 1000., 1000.);
+	g.setup(16, 16, 10., 10.);
 	
 	// blocks
 	block tmpBlock;
@@ -116,8 +128,8 @@ void ofApp::update() {
 
 
 	//// 3D
-	shadow.setLightPosition(ofVec3f(cos(ofGetElapsedTimef()*0.6) * 500, 250, 500));
-	shadow.setLightLookAt(ofVec3f(500, 500, 0));
+	shadow.setLightPosition(ofVec3f(cos(ofGetElapsedTimef()*0.6) * 5, 2.5, 5));
+	shadow.setLightLookAt(ofVec3f(5, 5, 0));
 
 	//// 2D
 
@@ -155,7 +167,7 @@ void ofApp::draw() {
 	cam.end();
 	shadow.endRenderPass();
 
-
+	//////
 	//// ofxSSAO
 	//ssao.begin(cam.getNearClip(), cam.getFarClip()); 
 
@@ -163,11 +175,9 @@ void ofApp::draw() {
 	//ofEnableDepthTest();
 	//glShadeModel(GL_SMOOTH); 
 	//cam.begin();
-
-	///////////////////
+	
 
 	//renderScene();
-
 
 
 	//// end 3D & cam
@@ -178,6 +188,7 @@ void ofApp::draw() {
 	//ssao.end();
 	//ofSetColor(255);
 	//ssao.draw();
+	//////
 
 
 	//// 2D
@@ -227,6 +238,38 @@ void ofApp::renderScene() {
 	for (int i = 0; i < blocks.size(); i++) {
 		blocks[i].draw();
 	}
+
+	//////
+	//ofBackground(241, 212, 55);
+
+	//ofSetColor(241, 238, 162);
+	//ofPushMatrix(); {
+	//	ofRotateX(cos(ofGetElapsedTimef() * 2.3) * sin(ofGetElapsedTimef()) * RAD_TO_DEG);
+	//	ofRotateY(sin(ofGetElapsedTimef()) * RAD_TO_DEG);
+	//	ofDrawBox(2, 2, 2);
+	//} ofPopMatrix();
+
+	//ofSetColor(241, 221, 113);
+	//ofDrawSphere(-4, sin(ofGetElapsedTimef()) * 3, 2);
+	//ofSetColor(183, 241, 195);
+	//ofDrawSphere(-4, sin(ofGetElapsedTimef() * 0.3) * 3, 5, 2);
+
+
+	//ofSetColor(241, 212, 55);
+	//ofPushMatrix(); {
+	//	ofTranslate(5, 0, 0);
+	//	ofRotate(180, 1, 0, 0);
+	//	ofScale(0.015, 0.015, 0.015);
+	//	bunny.draw();
+	//} ofPopMatrix();
+
+	//// floor //
+	//ofSetColor(142, 187, 151);
+	//ofDrawBox(0, 5, 0, 250, 2, 250);
+
+	//ofDrawBox(0, -8, 10, 80, 30, 2);
+
+
 
 }
 

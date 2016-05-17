@@ -92,5 +92,6 @@ class ofApp : public ofBaseApp{
 
 		// ofxShadowSimple
 		ofxShadowSimple shadow;
+		ofMesh bunny;
 
 };

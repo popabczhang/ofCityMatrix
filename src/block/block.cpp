@@ -14,10 +14,10 @@ void block::setup(int _xs, int _ys, int _id, int _r, ofColor _c, grid _g) {
 	// lego dimension
 	d_base_x = g.cellSizeX * g.shrink;
 	d_base_y = g.cellSizeY * g.shrink;
-	d_base_z = 5.;
+	d_base_z = 5. * .01;
 	d_nub_x = d_base_x / 4.;
 	d_nub_y = d_base_y / 4.;
-	d_nub_z = 10.;
+	d_nub_z = 10. * .01;
 
 	// cplane orgin location
 	x = (float(xStop) + .5) * g.cellSizeX;
