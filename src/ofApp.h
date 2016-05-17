@@ -11,7 +11,7 @@ April.18th.2016
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "ofxAssimpModelLoader.h"
-#include "imageClass.h"
+#include "imageClass/imageClass.h"
 // ball
 /*
 #include "ball/ball.h"
@@ -24,6 +24,7 @@ April.18th.2016
 #include "block/block_blank.h"
 #include "block/block_building.h"
 #include "block/block_road.h"
+#include "ofxSSAO/ofxSSAO.h"
 
 
 class ofApp : public ofBaseApp{
@@ -44,6 +45,10 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+
+		// ssao
+		void loadShaders();
+
 
 		ofEasyCam cam;
 		//ofFbo fbo; //brush code
@@ -75,5 +80,8 @@ class ofApp : public ofBaseApp{
 
 		// font
 		ofTrueTypeFont myfont;
+
+		// ssao
+		ofxSSAO ssao;
 
 };

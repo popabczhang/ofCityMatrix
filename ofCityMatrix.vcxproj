@@ -180,7 +180,7 @@
     <ClCompile Include="src\block\block_building.cpp" />
     <ClCompile Include="src\block\block_road.cpp" />
     <ClCompile Include="src\grid\grid.cpp" />
-    <ClCompile Include="src\imageClass.cpp" />
+    <ClCompile Include="src\imageClass\imageClass.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp" />
@@ -195,6 +195,7 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="src\ofxSSAO\ofxSSAO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ball\ball.h" />
@@ -206,7 +207,7 @@
     <ClInclude Include="src\block\block_building.h" />
     <ClInclude Include="src\block\block_road.h" />
     <ClInclude Include="src\grid\grid.h" />
-    <ClInclude Include="src\imageClass.h" />
+    <ClInclude Include="src\imageClass\imageClass.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h" />
@@ -258,6 +259,7 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="src\ofxSSAO\ofxSSAO.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

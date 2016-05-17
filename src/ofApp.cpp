@@ -56,6 +56,9 @@ void ofApp::setup() {
 		}
 	}
 
+	//ssao
+	ssao.setup();
+
 
 	//// 2D
 
@@ -94,6 +97,9 @@ void ofApp::setup() {
 void ofApp::update() {
 
 	//// overall
+	
+	// window title as fps
+	//ofSetWindowTitle(ofToString(ofGetFrameRate()));
 
 
 	//// 3D
@@ -122,9 +128,12 @@ void ofApp::draw() {
 
 	//// 3D
 
+	// ssao
+	ssao.begin(cam.getNearClip(), cam.getFarClip()); 
+
 	// begin 3D & cam
 	ofEnableDepthTest();
-	glShadeModel(GL_SMOOTH);
+	glShadeModel(GL_SMOOTH); 
 	cam.begin();
 
 	
@@ -144,6 +153,11 @@ void ofApp::draw() {
 	// end 3D & cam
 	cam.end();
 	ofDisableDepthTest();
+
+	// ssao
+	ssao.end();
+	ofSetColor(255);
+	ssao.draw();
 
 
 	//// 2D

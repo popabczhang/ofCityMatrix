@@ -43,9 +43,6 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
     </ClCompile>
-    <ClCompile Include="src\imageClass.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\ball\ball.cpp">
       <Filter>src\ball</Filter>
     </ClCompile>
@@ -72,6 +69,12 @@
     </ClCompile>
     <ClCompile Include="src\grid\grid.cpp">
       <Filter>src\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imageClass\imageClass.cpp">
+      <Filter>src\imageClass</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofxSSAO\ofxSSAO.cpp">
+      <Filter>src\ofxSSAO</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +119,12 @@
     </Filter>
     <Filter Include="src\grid">
       <UniqueIdentifier>{22055eeb-b4b1-4f76-9c38-31a2643c3d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\imageClass">
+      <UniqueIdentifier>{6267f515-528d-4d11-a027-83551071d518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ofxSSAO">
+      <UniqueIdentifier>{4f200874-87b8-4141-8714-8e41b30770ab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -272,9 +281,6 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
     </ClInclude>
-    <ClInclude Include="src\imageClass.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\ball\ball.h">
       <Filter>src\ball</Filter>
     </ClInclude>
@@ -301,6 +307,12 @@
     </ClInclude>
     <ClInclude Include="src\grid\grid.h">
       <Filter>src\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imageClass\imageClass.h">
+      <Filter>src\imageClass</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxSSAO\ofxSSAO.h">
+      <Filter>src\ofxSSAO</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
