@@ -11,8 +11,8 @@
 ofxSSAO::ofxSSAO()
 {
 	radius = 5.; //default: 50. when boxSize = 200.
-	maxThreshold = .1; //default: .1
-	minThreshold = .005; //default: .01
+	maxThreshold = .01; //default: .1
+	minThreshold = .001; //default: .01
 	exponent = .6; //default: .6
 	numSamples = 36; //default: 24
 	reflectRays = true;

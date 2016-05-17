@@ -27,7 +27,18 @@ void ofApp::setup() {
 	//// 3D
 
 	// easy cam
-	cam.setDistance(500);
+	cam.disableMouseInput();
+	cam.setDistance(1000);
+	cam.setPosition(500, -100, 1000);
+	cam.setTarget(ofVec3f(500, 500, 5));
+	cam.setNearClip(1);
+	cam.setFarClip(3000);
+	cam.enableMouseInput();
+
+	// ofxShadowSimple
+	/*
+	ofSetBoxResolution(30, 30, 30);
+	*/
 
 	
 	// load 3D model
@@ -56,7 +67,7 @@ void ofApp::setup() {
 		}
 	}
 
-	//ssao
+	// ofxSSAO
 	ssao.setup();
 
 
@@ -128,7 +139,7 @@ void ofApp::draw() {
 
 	//// 3D
 
-	// ssao
+	// ofxSSAO
 	ssao.begin(cam.getNearClip(), cam.getFarClip()); 
 
 	// begin 3D & cam
@@ -154,7 +165,7 @@ void ofApp::draw() {
 	cam.end();
 	ofDisableDepthTest();
 
-	// ssao
+	// ofxSSAO
 	ssao.end();
 	ofSetColor(255);
 	ssao.draw();

@@ -195,6 +195,7 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="src\ofxShadowSimple\ofxShadowSimple.cpp" />
     <ClCompile Include="src\ofxSSAO\ofxSSAO.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -259,6 +260,7 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="src\ofxShadowSimple\ofxShadowSimple.h" />
     <ClInclude Include="src\ofxSSAO\ofxSSAO.h" />
   </ItemGroup>
   <ItemGroup>

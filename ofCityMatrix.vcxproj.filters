@@ -76,6 +76,9 @@
     <ClCompile Include="src\ofxSSAO\ofxSSAO.cpp">
       <Filter>src\ofxSSAO</Filter>
     </ClCompile>
+    <ClCompile Include="src\ofxShadowSimple\ofxShadowSimple.cpp">
+      <Filter>src\ofxShadowSimple</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -125,6 +128,9 @@
     </Filter>
     <Filter Include="src\ofxSSAO">
       <UniqueIdentifier>{4f200874-87b8-4141-8714-8e41b30770ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ofxShadowSimple">
+      <UniqueIdentifier>{0b6d8775-7fcd-437d-aed3-fb0be5922dcb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +319,9 @@
     </ClInclude>
     <ClInclude Include="src\ofxSSAO\ofxSSAO.h">
       <Filter>src\ofxSSAO</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofxShadowSimple\ofxShadowSimple.h">
+      <Filter>src\ofxShadowSimple</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

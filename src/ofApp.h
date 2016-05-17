@@ -24,7 +24,10 @@ April.18th.2016
 #include "block/block_blank.h"
 #include "block/block_building.h"
 #include "block/block_road.h"
+
 #include "ofxSSAO/ofxSSAO.h"
+
+#include "ofxShadowSimple/ofxShadowSimple.h"
 
 
 class ofApp : public ofBaseApp{
@@ -81,7 +84,10 @@ class ofApp : public ofBaseApp{
 		// font
 		ofTrueTypeFont myfont;
 
-		// ssao
+		// ofxSSAO
 		ofxSSAO ssao;
+
+		// ofxShadowSimple
+		ofxShadowSimple shadow;
 
 };
